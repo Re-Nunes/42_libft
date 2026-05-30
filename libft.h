@@ -1,8 +1,9 @@
 #ifndef LIBFT_H
 #define LIBFT_H
 
-#include <stdlib.h>
-#include <unistd.h>
+#include <stdlib.h> // Define malloc e free
+#include <stddef.h> // Define size_t e NULL
+#include <unistd.h> // Define write e ssize_t
 
 typedef struct s_list
 {
