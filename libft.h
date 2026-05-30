@@ -18,6 +18,8 @@ int	ft_islnum(int c);
 int	ft_isascii(int c);
 int	ft_isprint(int c);
 size_t	ft_strlen(const char *string);
+int	ft_toupper(int c);
+
 
 /* Protótipos das Funções da Parte 2 (Adicionais) */
 

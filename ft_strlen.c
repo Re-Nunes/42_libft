@@ -13,15 +13,15 @@ size_t	ft_strlen(const char *string)
 	return(len);
 }
 
-#include <stdio.h>
-int main(void)
-{
-	char array[] = "nuvem";
-	char array1[] = "dados em nuvem";
-	long int result;
+// #include <stdio.h>
+// int main(void)
+// {
+// 	char array[] = "nuvem";
+// 	char array1[] = "dados em nuvem";
+// 	long int result;
 
-	result = ft_strlen(array);
-	printf("%ld\n", result);
-	printf("%ld\n", ft_strlen(array1));
-	return(0);
-}
+// 	result = ft_strlen(array);
+// 	printf("%ld\n", result);
+// 	printf("%ld\n", ft_strlen(array1));
+// 	return(0);
+// }
