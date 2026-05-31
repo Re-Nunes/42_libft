@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122 )
@@ -7,6 +5,7 @@ int	ft_toupper(int c)
 	return(c);
 }
 
+// #include <stdio.h>
 // int main(void)
 // {
 // 	char c;
