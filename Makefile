@@ -8,7 +8,11 @@ SRC = ft_isalpha.c \
 	  ft_isalnum.c \
 	  ft_isascii.c \
 	  ft_isprint.c \
-	  ft_strlen.c 
+	  ft_strlen.c \
+	  ft_memset.c \
+	  ft_toupper.c\
+	  ft_tolower.c
+
 OBS = $(SRC:.c=.o)
 
 all: $(NAME)
@@ -24,6 +28,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm a.out
 
 re: fclean all
 
