@@ -6,7 +6,7 @@
 /*   By: renatanu <renatanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 00:29:49 by renatanu          #+#    #+#             */
-/*   Updated: 2026/06/04 00:40:31 by renatanu         ###   ########.fr       */
+/*   Updated: 2026/06/04 21:12:31 by renatanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,12 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 size_t	ft_strlen(const char *string);
 void	*ft_memset(void *str, int value, size_t len);
+void	ft_bzero(void *s, size_t len);
+void	*ft_memcpy(void *dest, const void *src, size_t len);
+char	*ft_memmove(void *dest, const void *src, size_t len);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+
 
 /* Protótipos das Funções da Parte 2 (Adicionais) */
 
