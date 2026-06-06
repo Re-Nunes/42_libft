@@ -34,6 +34,7 @@ void	*ft_memset(void *str, int value, size_t len);
 void	ft_bzero(void *s, size_t len);
 void	*ft_memcpy(void *dest, const void *src, size_t len);
 char	*ft_memmove(void *dest, const void *src, size_t len);
+size_t	ft_strlcpy(char *dest, const char *src, size_t dsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 

@@ -13,22 +13,22 @@ SRC = ft_isalpha.c \
 	  ft_bzero.c \
 	  ft_memcpy.c \
 	  ft_memmove.c \
+	  ft_strlcpy.c \
 	  ft_toupper.c \
-	  ft_tolower.c \
+	  ft_tolower.c 
 	 
-
-OBS = $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBS)
-	ar rcs $(NAME) $(OBS)
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 %.o: %.c
 		$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBS)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
