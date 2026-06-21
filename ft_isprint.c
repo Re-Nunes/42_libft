@@ -6,7 +6,7 @@
 /*   By: renatanu <renatanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 14:33:32 by renatanu          #+#    #+#             */
-/*   Updated: 2026/06/03 23:36:37 by renatanu         ###   ########.fr       */
+/*   Updated: 2026/06/21 19:22:38 by renatanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,3 @@ int	ft_isprint(int c)
 		return (0);
 	return (1);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char c;
-
-// 	c = ' ';
-// 	printf("%d\n", ft_isprint(c));
-// 	return(0);
-// }

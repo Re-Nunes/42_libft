@@ -6,7 +6,7 @@
 /*   By: renatanu <renatanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 14:34:59 by renatanu          #+#    #+#             */
-/*   Updated: 2026/06/03 23:52:23 by renatanu         ###   ########.fr       */
+/*   Updated: 2026/06/21 19:24:17 by renatanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,3 @@ int	ft_toupper(int c)
 		c = c - 32;
 	return (c);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char c;
-
-// 	c = 'a';
-// 	printf("%c\n", ft_toupper(c));
-// 	return(0);
-// }

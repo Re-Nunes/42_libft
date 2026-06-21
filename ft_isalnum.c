@@ -6,7 +6,7 @@
 /*   By: renatanu <renatanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 20:18:50 by username          #+#    #+#             */
-/*   Updated: 2026/06/03 14:33:06 by renatanu         ###   ########.fr       */
+/*   Updated: 2026/06/21 19:25:13 by renatanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
-//#include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("%d\n", ft_isalnum('z'));
-// }

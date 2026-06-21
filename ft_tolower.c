@@ -6,7 +6,7 @@
 /*   By: renatanu <renatanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 14:34:54 by renatanu          #+#    #+#             */
-/*   Updated: 2026/06/03 23:44:01 by renatanu         ###   ########.fr       */
+/*   Updated: 2026/06/21 19:24:09 by renatanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,3 @@ int	ft_tolower(int c)
 		c = c + 32;
 	return (c);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char c;
-
-// 	c = 'Z';
-// 	printf("%c\n", ft_tolower(c));
-// 	return(0);
-// }

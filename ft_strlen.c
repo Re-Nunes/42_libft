@@ -6,7 +6,7 @@
 /*   By: renatanu <renatanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 14:34:05 by renatanu          #+#    #+#             */
-/*   Updated: 2026/06/03 23:41:03 by renatanu         ###   ########.fr       */
+/*   Updated: 2026/06/21 19:23:33 by renatanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,3 @@ size_t	ft_strlen(const char *string)
 	}
 	return (len);
 }
-
-// #include <stddef.h>
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char array[] = "nuvem";
-// 	char array1[] = "dados em nuvem";
-// 	long int result;
-
-// 	result = ft_strlen(array);
-// 	printf("%ld\n", result);
-// 	printf("%ld\n", ft_strlen(array1));
-// 	return(0);
-// }
