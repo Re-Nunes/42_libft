@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: renatanu <renatanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/11 18:35:14 by renatanu          #+#    #+#             */
-/*   Updated: 2026/06/21 14:58:59 by renatanu         ###   ########.fr       */
+/*   Created: 2026/06/21 14:52:00 by renatanu          #+#    #+#             */
+/*   Updated: 2026/06/21 15:01:02 by renatanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*str;
-	char	*ptr;
-	size_t	i;
+	t_list	*head;
+	t_list	*pointer;
 
-	ptr = (char *) s;
-	str = malloc((ft_strlen(ptr) + 1) * sizeof(char));
-	if (str == NULL)
+	if (!lst || !f || !del)
 		return (NULL);
-	i = 0;
-	while (ptr[i])
+	head = NULL;
+	while (lst)
 	{
-		str[i] = ptr[i];
-		i++;
+		pointer = ft_lstnew(f(lst->content));
+		if (!pointer)
+			ft_lstclear(&head, del);
+		ft_lstadd_back(&head, pointer);
+		lst = lst->next;
 	}
-	str[i] = '\0';
-	return (str);
+	return (head);
 }

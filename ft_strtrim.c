@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: renatanu <renatanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/11 18:35:14 by renatanu          #+#    #+#             */
-/*   Updated: 2026/06/21 14:58:59 by renatanu         ###   ########.fr       */
+/*   Created: 2026/06/21 14:54:44 by renatanu          #+#    #+#             */
+/*   Updated: 2026/06/21 14:57:05 by renatanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strdup(const char *s)
+char	*ft_strtrim(char const *s1, char const *set)
 {
+	int		right;
+	int		left;
+	int		len;
 	char	*str;
-	char	*ptr;
-	size_t	i;
 
-	ptr = (char *) s;
-	str = malloc((ft_strlen(ptr) + 1) * sizeof(char));
-	if (str == NULL)
+	right = 0;
+	while (ft_strchr(set, s1[right]) != NULL)
+		right++;
+	len = ft_strlen(s1);
+	left = len - 1;
+	while (left >= right && ft_strrchr(set, s1[left]) != NULL)
+		left--;
+	if (left < right)
+		left = right - 1;
+	str = malloc((left - right + 2) * sizeof(char));
+	if (!str)
 		return (NULL);
-	i = 0;
-	while (ptr[i])
-	{
-		str[i] = ptr[i];
-		i++;
-	}
-	str[i] = '\0';
+	ft_strlcpy(str, s1 + right, left - right + 2);
 	return (str);
 }
