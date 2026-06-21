@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: renatanu <renatanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/21 14:51:28 by renatanu          #+#    #+#             */
-/*   Updated: 2026/06/21 15:00:37 by renatanu         ###   ########.fr       */
+/*   Created: 2026/06/21 14:52:00 by renatanu          #+#    #+#             */
+/*   Updated: 2026/06/21 17:52:02 by renatanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*last;
-	t_list	*lst_next;
+	t_list	*head;
+	t_list	*pointer;
 
-	if (!lst || !*lst || !del)
-		return ;
-	last = *lst;
-	while (last)
+	if (!lst || !f || !del)
+		return (NULL);
+	head = NULL;
+	while (lst)
 	{
-		lst_next = last->next;
-		ft_lstdelone(last, del);
-		last = lst_next;
+		pointer = ft_lstnew(f(lst->content));
+		if (!pointer)
+			ft_lstclear(&head, del);
+		ft_lstadd_back(&head, pointer);
+		lst = lst->next;
 	}
-	*lst = NULL;
+	return (head);
 }

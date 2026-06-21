@@ -6,7 +6,7 @@
 /*   By: renatanu <renatanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 19:03:12 by renatanu          #+#    #+#             */
-/*   Updated: 2026/06/04 19:03:13 by renatanu         ###   ########.fr       */
+/*   Updated: 2026/06/21 16:55:22 by renatanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,3 @@ void	*ft_memset(void *str, int value, size_t len)
 	}
 	return (str);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char array[] = "rosa";
-
-// 	ft_memset(array, 97 , 4);
-// 	printf("%s\n", array);
-// 	return(0);
-// }
