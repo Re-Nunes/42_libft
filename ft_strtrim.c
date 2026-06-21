@@ -6,9 +6,11 @@
 /*   By: renatanu <renatanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 14:54:44 by renatanu          #+#    #+#             */
-/*   Updated: 2026/06/21 14:57:05 by renatanu         ###   ########.fr       */
+/*   Updated: 2026/06/21 15:15:40 by renatanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
